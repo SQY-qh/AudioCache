@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AudioLCM: Text-to-Audio Generation with Latent Consistency Models</title> 
+    <title>AudioCache: Accelerate Audio Generation With Training-Free Layer Caching</title> 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,29 +22,17 @@
   <body>
     <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
       <div class="text-center">
-        <h1>AudioLCM</h1><h3>Text-to-Audio Generation with Latent Consistency Models</h3>
-        <p class="lead fw-bold">
-          <a
-            href=""
-            class="btn border-white bg-white fw-bold"
-            >paper</a
-          >|<a
-            href="https://github.com/liuhuadai/AudioLCM"
-            class="btn border-white bg-white fw-bold"
-            >code</a
-          >|
-        </p>
+        <h1>AudioCache</h1><h3>ccelerate Audio Generation With Training-Free Layer Caching</h3>
         <p class="fst-italic mb-0">
-        Huadai Liu, Rongjie Huang, Yang Liu, Hengyuan Cao, Jialei Wang, Xize Cheng, Siqi Zheng, Zhou Zhao
+        Qingyang Shi, Zhicheng Du, Jiasheng Lu, Yingshan Liang, Xinyu Zhang, Yiran Wang, Jing Peng, Kehong Yuan
         </p>
         <p><b></b></p>
       </div>
       <p>
         <b>Abstract.</b>  
-        Recent advancements in Latent Diffusion Models (LDMs) have propelled them to the forefront of various generative tasks. However, their iterative sampling process poses a significant computational burden, resulting in slow generation speeds and limiting their application in text-to-audio generation deployment. In this work, we introduce AudioLCM, a novel consistency-based model tailored for efficient and high-quality text-to-audio generation. Unlike prior approaches that address noise removal through iterative processes, AudioLCM integrates Consistency Models (CMs) into the generation process, facilitating rapid inference through a mapping from any point at any time step to the trajectory's initial point. To overcome the convergence issue inherent in LDMs with reduced sample iterations, we propose the Guided Latent Consistency Distillation with a multi-step Ordinary Differential Equation (ODE) solver. This innovation shortens the time schedule from thousands to dozens of steps while maintaining sample quality, thereby achieving fast convergence and high-quality generation. Furthermore, to optimize the performance of transformer-based neural network architectures, we integrate the advanced techniques pioneered by LLaMA into the foundational framework of transformers. This architecture supports stable and efficient training, ensuring robust performance in text-to-audio synthesis. Experimental results on text-to-audio generation and text-to-music synthesis tasks demonstrate that AudioLCM needs only 2 iterations to synthesize high-fidelity audios, while it maintains sample quality competitive with state-of-the-art models using hundreds of steps. AudioLCM enables a sampling speed of 333x faster than real-time on a single NVIDIA 4090Ti GPU, making generative models practically applicable to text-to-audio generation deployment. Our extensive preliminary analysis shows that each design in AudioLCM is effective.
+        Diffusion models have become the primary choice in audio generation. However, their slow generation speed necessitates acceleration techniques. While current audio generation methods primarily target U-Net-based models, the Diffusion Transformer (DiT) is emerging as the trend in audio generation. As DiT costs a large amount of computational resources, we propose AudioCache: a training-free caching strategy that, for the first time to our best knowledge, accelerates DiT-based audio generation models by reusing the attention and feedforward layers of DiT during sampling. We define a reasonable statistic to characterize the degree of internal structure variation, leading to the proposal of a self-adaptive caching strategy. We achieve a 2.35x acceleration with both objective and subjective metrics remaining practically consistent. Furthermore, our method is extendable to different models and input modalities. Based on appropriate indicators and corresponding rules, this method provides a plug-and-play solution for training-free diffusion models built on attention architectures.
       </p>
     </div>
-
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
     <h2 id="model-overview" style="text-align: center;">AudioLCM Overview</h2>
     <body>
