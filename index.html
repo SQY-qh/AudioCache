@@ -50,7 +50,12 @@
 <div class="container shadow p-5 mb-5 bg-white rounded">
     <h3>Text-to-Audio Generation<a id="efficiency"/></h3>
     <div class="container pt-3 table-responsive">
-        <table class="table table-hover" id="supervision-efficiency-table">
+        <table class="table table-bordered" id="supervision-efficiency-table">
+            <colgroup>
+                <col width="30%">
+                <col width="35%">
+                <col width="35%">
+            </colgroup>
             <thead>
                 <tr>
                     <th style="text-align: center;">Text Prompts</th>
@@ -60,22 +65,31 @@
             </thead>
             <tbody>
                 <tr height="200px">
-                    <td>Racing vehicles accelerating from a distance growing louder than driving by at a high rate</td>
-                    <td>
+                    <td style="text-align: center;">
+                        Racing vehicles accelerating from a distance growing louder than driving by at a high rate
+                        <br>
                         <!-- 频谱图 -->
-                        <img src="ground-truth-spectrum-url" style="width:100%;">
+                        <img src="ground-truth-spectrum-url" style="width:100%; margin-bottom: 10px;">
                         <!-- 音频播放器 -->
-                        <audio controls style="margin-top: 10px;">
+                        <audio controls style="margin-left: auto; margin-right: auto;">
                             <source src="ground-truth-audio-url" type="audio/mpeg">
-                        </audio>
+                        
                     </td>
-                    <td>
+                    <td style="text-align: center;">
                         <!-- 频谱图 -->
-                        <img src="audiolcm-spectrum-url" style="width:100%;">
+                        <img src="audiolcm-spectrum-url" style="width:100%; margin-bottom: 10px;">
                         <!-- 音频播放器 -->
-                        <audio controls style="margin-top: 10px;">
+                        <audio controls style="margin-left: auto; margin-right: auto;">
                             <source src="audiolcm-audio-url" type="audio/mpeg">
-                        </audio>
+                        
+                    </td>
+                    <td style="text-align: center;">
+                        <!-- 频谱图 -->
+                        <img src="audiolcm-spectrum-url" style="width:100%; margin-bottom: 10px;">
+                        <!-- 音频播放器 -->
+                        <audio controls style="margin-left: auto; margin-right: auto;">
+                            <source src="audiolcm-audio-url" type="audio/mpeg">
+                        
                     </td>
                 </tr>
                 <!-- 更多行，按照上面的模式进行复制和调整 -->
