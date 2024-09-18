@@ -3,77 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo of My Research Paper</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-        form {
-            margin-top: 20px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-        }
-        button {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>AudioLCM</title>
+    <!-- Replace with your actual CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the Demo Page for My Research Paper</h1>
-        <p>This is a simple webpage used to showcase my research work. You can find the abstract of my paper and other related information here.</p>
-        
-        <!-- Example paper abstract -->
-        <h2>Paper Abstract</h2>
-        <p>Here is a brief introduction about my research project. In this paper, we explore...</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">AudioLCM</h1>
+            <nav class="navbar">
+                <a href="#text-to-audio-generation">Text-to-Audio Generation</a>
+                <a href="#text-to-music-synthesis">Text-to-Music Synthesis</a>
+                <a href="#preliminary-analyses">Preliminary Analyses</a>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Example audio or video file -->
-        <h2>Audio/Video Demonstration</h2>
-        <audio controls>
-            <source src="path/to/audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <br>
-        <video controls width="420" height="315">
-            <source src="path/to/video.mp4" type="video/mp4">
-            Your browser does not support the video element.
-        </video>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>AudioLCM Overview</h2>
+            <!-- Replace with your actual image -->
+            <img src="your-image.jpg" alt="AudioLCM Overview Image">
+        </div>
+    </section>
 
-        <!-- Contact form -->
-        <h2>Contact Us</h2>
-        <form action="/submit-your-form-here" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+    <!-- Table of Contents -->
+    <section class="table-of-contents">
+        <div class="container">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#text-to-audio-generation">Text-to-Audio Generation</a></li>
+                <li><a href="#preliminary-analyses-classifier-free-guidance">Preliminary Analyses - Classifier-free Guidance</a></li>
+                <li><a href="#preliminary-analyses-multi-step-ode-solver">Preliminary Analyses - Multi-step ODE Solver</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Text-to-Audio Generation -->
+    <section id="text-to-audio-generation">
+        <div class="container">
+            <h2>Text-to-Audio Generation</h2>
+            <p>Ground-truth audio clips and design baselines.</p>
+            <!-- Replace with your actual audio files -->
+            <div class="audio-clips">
+                <div class="clip">
+                    <h3>Thunderstorm and a garden</h3>
+                    <audio controls>
+                        <source src="your-audio-file.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <!-- Add more audio clips as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 AudioLCM. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
